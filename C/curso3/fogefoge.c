@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-// Teste de versao
+
 // char mapa[5][10+1];
 char** mapa;
 
