@@ -3,9 +3,8 @@
 <h2>🔖 Sobre</h2>
 <p>Aqui incluo todos os projetos que realizo/realizei na plataforma.</p>
 <h2>📌 Carreira em linguagem C - Pasta C</h2>
-
-* Curso3: Recursos avançados da linguagem
-
+    <p> - Curso3: Recursos avançados da linguagem.</p>
+  
 ## 🚀 Tecnologias
 <div>
     <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
