@@ -6,29 +6,29 @@ restaurantes = [{'nome': 'Praca', 'categoria': 'Japonesa', 'ativo': False},
 				{'nome': 'Pizza Suprema', 'categoria': 'pizza', 'ativo': True},
 				{'nome': 'Cantina', 'categoria': 'Italiano', 'ativo': False}]
 
-#Funcao para exibir nome do progama
 def exibir_nome_do_programa():
+	''' Esta funçao apresenta o nome do programa '''
 	print('\nSᴀʙᴏʀ Exᴘʀᴇss \n')
 
-#Funcao para exibir as opceos
 def exibir_opcoes():
+	''' Esta funçao apresenta a lista de açoes para a usabilidade do app '''
 	print('1. Cadastrar Restaurante')
 	print('2. Listar Restaurante')
 	print('3. Alternar estado do Restaurante')
 	print('4. Sair \n')
 
-#Funcao para finalizar app
 def finalizar_app():
+	''' Esta funçao limpa a tela do terminal e finaliza as açoes do app '''
 	os.system('clear')
 	print('Finalizando o app\n')
 
-#Funcao para retornar ao menu principal
 def voltar_ao_menu():
+	''' Esta funçao retorna ao menu de açoes para usabilidade do app '''
 	input('\nDigite uma tecla para voltar ao menu principal...')
 	main()
 
-#Funcao para exibir subtitulo
 def exibir_subtitulo(texto):
+	''' Esta funçao realiza uma limpeza na tela e apresenta o titulo de cada item no app'''
 	os.system('clear')
 	linha = '*' * (len(texto))
 	print(linha)
@@ -36,13 +36,22 @@ def exibir_subtitulo(texto):
 	print(linha)
 	print()
 
-#Funcao para quando o programa receber um valor invalido
 def opcao_invalida():
+	''' Esta opcao valida se o valor da entrada e uma opcao valida '''
 	print('Opcao invalida\n')
 	voltar_ao_menu()
 
-#Funcao para cadastar um novo restaurante
 def cadastrar_novo_restaurante():
+	''' Essa funçao e responsavel por cadastrar um novo restaurante
+	
+	Inputs:
+	- Nome do restaurante
+	- Categoria
+
+	Outputs:
+	- Adiciona um novo restaurante da lista de restaurantes
+
+	'''
 	exibir_subtitulo('Cadastros de novos restaurantes\n')
 	nome_do_restaurante = input('Digite o nome para cadastro do restaurante: ')
 	categoria = input(f'Digite o nome da categoria do restaurante {nome_do_restaurante}:')
@@ -51,8 +60,8 @@ def cadastrar_novo_restaurante():
 	print(f'O restaurante {nome_do_restaurante} foi cadastrado!')
 	voltar_ao_menu()
 
-#Funcao para listar os restaurantes
 def listar_restaurantes():
+	''' Esta funcao lista os restaurantes cadastrados '''
 	exibir_subtitulo('Listando os restaurantes\n')
 	print(f'{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status')
 	for restaurante in restaurantes:
@@ -62,8 +71,8 @@ def listar_restaurantes():
 		print(f'- {nome_restaurante.ljust(20)} | {categoria.ljust(20)} | {ativo}')
 	voltar_ao_menu()
 
-#Ativando os restaurantes
 def alternar_estado_restaurante():
+	''' Esta funcao alterna o estado do restaurante ativo/inativo '''
 	exibir_subtitulo('Alternando o estado do restaurante\n')
 	#listar restaurantes para visualizar antes de editar
 	for restaurante in restaurantes:
@@ -84,8 +93,8 @@ def alternar_estado_restaurante():
 
 	voltar_ao_menu()
 
-#Funcao para escolher a opcao
 def escolher_opcao():
+	''' Esta funcao apresenta as funcoes disponiveis para selecao no app '''
 	try:
 		opcao_escolhida = int(input('Escolha uma opcao: '))
 		print(f'voce escolheu a opcao: {opcao_escolhida}')
@@ -102,13 +111,13 @@ def escolher_opcao():
 	except:
 		opcao_invalida()
 
-#Funcao main onde puxara todas as opcoes
 def main():
+	''' Esta funcao define as chamadas das outras funcoes no app '''
 	os.system('clear')
 	exibir_nome_do_programa()
 	exibir_opcoes()
 	escolher_opcao()
 
-#Definindo como o programa principal
+''' A condicao abaixo define o programa como sendo o principal '''
 if __name__ == '__main__':
 	main()
