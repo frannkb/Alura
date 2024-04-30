@@ -21,10 +21,10 @@ class AccountBank:
 		return f'This account belongs to: {self.titleholder} and its balance is: {self.balance}'
 
 	@classmethod
-	def list_account(show):
+	def list_account(cls):
 		print(' -- Account Bank')
 		print(f'{'Account name'.ljust(20)} | {'Balance'.ljust(20)} | {'Active?'}')
-		for account in show.accounts:
+		for account in cls.accounts:
 			print(f'{account.titleholder.ljust(20)} | {str(account.balance).ljust(20)} | {account._active}')
 	
 	def active_account(self):
