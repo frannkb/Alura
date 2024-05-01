@@ -21,9 +21,3 @@ class Restaurant:
 	
 	def change_state(self):
 		self._active = not self._active
-
-restaurant_square = Restaurant('square', 'Gourmet')
-restaurant_square.change_state()
-restaurant_pizza = Restaurant('pizza Express', 'Italian')
-
-Restaurant.list_restaurants()
