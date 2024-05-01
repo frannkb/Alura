@@ -2,11 +2,8 @@
 from modelos.restaurant import Restaurant
 
 restaurant_square = Restaurant('Square','Gourmet')
-restaurant_mexican = Restaurant('Mexican Food', 'Mecican')
-restaurant_japan = Restaurant('Japa','Japan')
-
-restaurant_mexican.change_state()
-
+restaurant_square.get_avaliation('Frank', 8)
+restaurant_square.get_avaliation('Bruna', 4)
 
 def main():
 	Restaurant.list_restaurants()
