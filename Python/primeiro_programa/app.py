@@ -15,12 +15,14 @@ def exibir_nome_do_programa():
     """)
 
 def exibir_opcoes():
+    ''' Está função exibe as opções do menu''' ## Dockstrings
     print('1. Cadastrar Restaurante')
     print('2. Listar Restaurante')
     print('3. Alternar estado do  Restaurante')
     print('4. Sair\n')
 
 def exibir_subtitulo(texto):
+    ''' Está função apresenta o subtitulo do menu escolhido''' ## Dockstrings
     os.system('cls')
     linha = '*' * len(texto)
     print(linha)
